@@ -5,7 +5,7 @@ MAIN_TEXT_FILE: Final[str] = 'banned_terms.txt'
 NEW_WORDS_TEXT_FILE: Final[str] = 'new_words.txt'
 
 if not os.path.exists(MAIN_TEXT_FILE) or not os.path.exists(NEW_WORDS_TEXT_FILE):
-    raise FileNotFoundError(f'File not found: ({NEW_WORDS_TEXT_FILE=}) ({NEW_WORDS_TEXT_FILE=})')
+    raise FileNotFoundError(f'File(s) not found: ({MAIN_TEXT_FILE=}) ({NEW_WORDS_TEXT_FILE=})')
 
 mainTextFileWords: set[str] = set()
 rawLines: Collection[str | Any | None]
